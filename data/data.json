@@ -14,5 +14,15 @@
     "tasks": [
       "task extra"
     ]
+  },
+  {
+    "id": 4,
+    "title": "Project Secret",
+    "tasks": []
+  },
+  {
+    "id": 5,
+    "title": "Project Secret 2",
+    "tasks": []
   }
 ]

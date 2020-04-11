@@ -1,9 +1,12 @@
 const http = require('http');
 const url = require('url');
-const fs = require('fs');
 const querystring = require('querystring');
 
-const data = fs.readFileSync('data/data.json');
+const fileHelper = require('./helpers/fileHelper.js');
+
+fileHelper.createDatabase();
+
+const data = fileHelper.fileRead();
 
 let projects = JSON.parse(data);
 let lastindex = projects[projects.length - 1].id;
@@ -42,13 +45,7 @@ const server = http.createServer((req, res) => {
             } else {
                 projects.push({id: ++lastindex, title, tasks: [] });
 
-                fs.writeFile('data/data.json', JSON.stringify(projects, null, 2), (err) => {
-                    if (err) {
-                        sendResponse(res, 500, { message: 'could not persist data!' });
-                    } else {
-                        sendResponse(res, 200, projects);
-                    }
-                });
+                fileHelper.fileWrite(res, projects, sendResponse);
             }
         });
     } else if (urlparse.pathname === '/projects/tasks' && req.method === 'POST') {
@@ -72,13 +69,7 @@ const server = http.createServer((req, res) => {
                             }
                         });
 
-                        fs.writeFile('data/data.json', JSON.stringify(projects, null, 2), (err) => {
-                            if (err) {
-                                sendResponse(res, 500, { message: 'could not persist data!' });
-                            } else {
-                                sendResponse(res, 200, projects);
-                            }
-                        });
+                        fileHelper.fileWrite(res, projects, sendResponse);
                     }
                 } else {
                     sendResponse(res, 400, { message: 'no id parameter!' });
@@ -108,13 +99,7 @@ const server = http.createServer((req, res) => {
                             }
                         });
 
-                        fs.writeFile('data/data.json', JSON.stringify(projects, null, 2), (err) => {
-                            if (err) {
-                                sendResponse(res, 500, { message: 'could not persist data!' });
-                            } else {
-                                sendResponse(res, 200, projects);
-                            }
-                        });
+                        fileHelper.fileWrite(res, projects, sendResponse);
                     }
                 } else {
                     sendResponse(res, 400, { message: 'no id parameter!' });
@@ -132,13 +117,7 @@ const server = http.createServer((req, res) => {
 
             projects = projects.filter(project => project.id != data.id);
 
-            fs.writeFile('data/data.json', JSON.stringify(projects, null, 2), (err) => {
-                if (err) {
-                    sendResponse(res, 500, { message: 'could not persist data!' });
-                } else {
-                    sendResponse(res, 200, projects);
-                }
-            });
+            fileHelper.fileWrite(res, projects, sendResponse);
         } else {
             sendResponse(res, 200, projects);
         }
