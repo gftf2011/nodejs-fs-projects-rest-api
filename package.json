@@ -1,0 +1,15 @@
+{
+  "name": "nodejs-fs-projects-rest-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/gftf2011/nodejs-fs-projects-rest-api.git",
+  "author": "Gabriel Ferrari Tarallo Ferraz <gftf2011@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {}
+}
