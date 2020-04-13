@@ -6,7 +6,7 @@
   "author": "Gabriel Ferrari Tarallo Ferraz <gftf2011@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon ./src/index.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"

@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const path = 'data/data.json';
+const path = './src/data/data.json';
 
 const fileExists = () => {
     try {
@@ -16,14 +16,8 @@ const fileExists = () => {
 
 const createDatabase = () => {
     if (!fileExists()) {
-        const initialdata = JSON.stringify([]);
-        fs.writeFile(path, initialdata, (err) => {
-            if (err) {
-                console.error(err);
-            } else {
-                console.log('initial database created...');
-            }
-        });
+        fs.mkdirSync('./src/data', { recursive: true });
+        fs.writeFileSync(path, JSON.stringify([]));
     } else {
         console.log('database already exists...');
     }
