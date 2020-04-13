@@ -119,8 +119,10 @@ const server = http.createServer((req, res) => {
 
             fileHelper.fileWrite(res, projects, sendResponse);
         } else {
-            sendResponse(res, 400, { message: 'no id parameter!' });
+            sendResponse(res, 400, { message: 'no query parameter!' });
         }
+    } else {
+        sendResponse(res, 404, { message: 'service not found!' });
     }
 });
 
