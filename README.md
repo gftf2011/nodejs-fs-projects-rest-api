@@ -2,7 +2,6 @@
   <img alt="Imagem da Logo do Framework node.js" src="https://www.pinclipart.com/picdir/big/102-1024697_related-wallpapers-node-js-logo-png-clipart.png" height="120" /><br><br> Node Project Management API
 </h1>
 
-
 ## :microscope: Tecnologies
 
 - [yarn](https://classic.yarnpkg.com/lang/en/)
@@ -24,5 +23,5 @@
 
 ## :airplane: application routes
 
--  <strong>`GET /projects :`<strong/> *Endpoint responsible to read all projects*
--  <strong>`GET /projects?id=`<em>`number`<em>` :`<strong/>
+-  <strong>`GET /projects :`<strong/> <i>Endpoint responsible to read all projects<i/>
+-  <strong>`GET /projects?id=`<strong/><em>`number`<em><strong>`:`<strong/> <i>Endpoint responsible to retrieve a specific project given its unique identifier<i/>
