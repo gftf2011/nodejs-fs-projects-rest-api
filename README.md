@@ -18,10 +18,11 @@
 
 4.  Open the project with a text editor and run 'yarn' to download the dependencies
 
-5.  Postman download://www.getpostman.com/downloads/)[https://www.getpostman.com/downloads/]
+5.  Postman download [https://www.getpostman.com/downloads/](https://www.getpostman.com/downloads/)
 
 6.  Run 'yarn dev' to use the <strong>endpoints<strong/>
 
 ## :airplane: application routes
 
--  <strong>GET /projects :<strong/> *Endpoint responsible to read all projects*
+-  <strong>`GET /projects :`<strong/> *Endpoint responsible to read all projects*
+-  <strong>`GET /projects?id=`<em>`number`<em>` :`<strong/>
