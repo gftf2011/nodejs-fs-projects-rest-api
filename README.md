@@ -9,7 +9,7 @@
   
   <img alt="GitHub issues" src="https://img.shields.io/github/issues/gftf2011/nodejs-fs-projects-rest-api">
 
-  <img alt="Codacy grade" src="https://img.shields.io/codacy/grade/64440c303fa24e9c93e263dab133ae68">
+  <img alt="Codacy grade" src="https://img.shields.io/codacy/grade/b37f8e24805143d08bb2b674e5255ef7">
   
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/gftf2011/nodejs-fs-projects-rest-api">
 
@@ -31,8 +31,6 @@
 </p>
 
 ## :smiley: Purpose
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b37f8e24805143d08bb2b674e5255ef7)](https://app.codacy.com/manual/gftf2011/nodejs-fs-projects-rest-api?utm_source=github.com&utm_medium=referral&utm_content=gftf2011/nodejs-fs-projects-rest-api&utm_campaign=Badge_Grade_Dashboard)
 
 <p align="center">
   This project was built with intention to explore node.js internal modules, which means no Express. So, to fulfill this purpose, the most known modules were used! Among them are the 'fs' - (File System) module from node.js that is used to store our data, in the project it's not used any database management system like Postgres, Oracle OR MongoDB!
