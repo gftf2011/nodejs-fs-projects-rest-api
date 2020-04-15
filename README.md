@@ -6,7 +6,8 @@
 <p align="center">
   <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#car-run-the-application">Run the application</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#airplane-application-routes">Application routes</a>
+  <a href="#airplane-application-routes">Application routes</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-license">License</a>
 </p>
 
 ## :rocket: Technologies
@@ -61,8 +62,8 @@ Request body example below
 <em>`number : `<em/> Represents the `id` passed in the query string <br/>
 
 ### :memo: License
-This project is under the MIT license. See the [LICENSE]() for more information.
+This project is under the MIT license. See the [LICENSE](https://github.com/gftf2011/nodejs-fs-projects-rest-api/blob/master/LICENSE) for more information.
 
 ---
 
-Made with ♥ by Gabriel Ferrari Tarallo Ferraz :wave: [Get in touch!]()
+Made with ♥ by Gabriel Ferrari Tarallo Ferraz :wave: [Get in touch!](https://www.linkedin.com/in/gabriel-ferrari-tarallo-ferraz-7a4218135/)
