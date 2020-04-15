@@ -24,11 +24,19 @@
 ## :airplane: application routes
 
 -  <strong>`GET /projects :`<strong/> <i>Endpoint responsible to read all projects<i/>
--  <strong>`GET /projects?id=`<strong/><em>`number`<em><strong>`:`<strong/> <i>Endpoint responsible to retrieve a specific project given its unique identifier<i/>
+-  <strong>`GET /projects?id=`<strong/><em>`number`<em><strong>`:`<strong/> <i>Endpoint responsible to retrieve a specific project given its `id`<i/>
+>  <em>`number : `<em/> Represents the `id` passed in the query string
 -  <strong>`POST /projects :`<strong/> <i>Endpoint responsible to create a project receiving in the request body the project's `title`<i/>
   >  Request body example below
   >  ```javascript
   >  {
   >    "title": "Project 1"
+  >  }
+  >  ```
+-  <strong>`POST /projects/tasks?id=`<strong/><em>`number`<em/><strong>`:`<strong/> <i>Endpoint responsible to create a task to a specific project given its `id`, also its passed through the request body the `task` for the project<i/>
+>  Request body example below
+  >  ```javascript
+  >  {
+  >    "task": "task 1"
   >  }
   >  ```
