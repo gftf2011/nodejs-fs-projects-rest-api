@@ -2,7 +2,12 @@
   <img alt="Imagem da Logo do Framework node.js" src="https://www.pinclipart.com/picdir/big/102-1024697_related-wallpapers-node-js-logo-png-clipart.png" height="120" /><br><br> Node Project Management API
 </h1>
 
-## :rocket: Tecnologies
+
+<p align="center">
+  <a href="#rocket-technologies">Technologies</a>
+</p>
+
+## :rocket: Technologies
 
 - [yarn](https://classic.yarnpkg.com/lang/en/)
 - [node.JS](https://nodejs.org/en/)
@@ -26,17 +31,29 @@
 -  <strong>`GET /projects :`<strong/> <i>Endpoint responsible to read all projects<i/>
 -  <strong>`GET /projects?id=`<strong/><em>`number`<em><strong>`:`<strong/> <i>Endpoint responsible to retrieve a specific project given its `id`<i/>
 >  <em>`number : `<em/> Represents the `id` passed in the query string
--  <strong>`POST /projects :`<strong/> <i>Endpoint responsible to create a project receiving in the request body the project's `title`<i/>
-  >  Request body example below
-  >  ```javascript
-  >  {
-  >    "title": "Project 1"
-  >  }
-  >  ```
--  <strong>`POST /projects/tasks?id=`<strong/><em>`number`<em/><strong>`:`<strong/> <i>Endpoint responsible to create a task to a specific project given its `id`, also its passed through the request body the `task` for the project<i/>
->  Request body example below
-  >  ```javascript
-  >  {
-  >    "task": "task 1"
-  >  }
-  >  ```
+-  <strong>`POST /projects :`<strong/> <i>Endpoint responsible to create a project receiving in the request body the project's `title`<i/><br/><br/>
+Request body example below
+```json
+{
+  "title": "Project 1"
+}
+```
+-  <strong>`POST /projects/tasks?id=`<strong/><em>`number`<em/><strong>`:`<strong/> <i>Endpoint responsible to create a task to a specific project given its `id`, also its passed through the request body the `task` for the project<i/><br/><br/>
+<em>`number : `<em/> Represents the `id` passed in the query string<br/><br/>
+Request body example below
+
+```json
+{
+  "task": "task 1"
+}
+```
+-  <strong>`PUT /projects?id=`<strong/><em>`number`<em/><strong>`:`<strong/> <i>Endpoint responsible to update a specific project's title given its `id`, also its passed through the request body the new project's `title`<i/><br/><br/>
+<em>`number : `<em/> Represents the `id` passed in the query string<br/><br/>
+Request body example below
+```json
+{
+  "title": "Project 2"
+}
+```
+-  <strong>`DELETE /projects?id=`<strong/><em>`number`<em/><strong>`:`<strong/> <i>Endpoint responsible to remove a specific project given its `id`.<i/>
+<em>`number : `<em/> Represents the `id` passed in the query string <br/>
