@@ -23,3 +23,5 @@
 6.  Run 'yarn dev' to use the <strong>endpoints<strong/>
 
 ## :airplane: application routes
+
+-  <strong>GET /projects :<strong/> *Endpoint responsible to read all projects*
