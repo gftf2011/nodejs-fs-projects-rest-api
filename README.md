@@ -4,7 +4,8 @@
 
 
 <p align="center">
-  <a href="#rocket-technologies">Technologies</a>
+  <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#car-run-the-application">Run the application</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
 ## :rocket: Technologies
@@ -29,8 +30,8 @@
 ## :airplane: application routes
 
 -  <strong>`GET /projects :`<strong/> <i>Endpoint responsible to read all projects<i/>
--  <strong>`GET /projects?id=`<strong/><em>`number`<em><strong>`:`<strong/> <i>Endpoint responsible to retrieve a specific project given its `id`<i/>
->  <em>`number : `<em/> Represents the `id` passed in the query string
+-  <strong>`GET /projects?id=`<strong/><em>`number`<em><strong>`:`<strong/> <i>Endpoint responsible to retrieve a specific project given its `id`<i/><br/><br/>
+<em>`number : `<em/> Represents the `id` passed in the query string<br/><br/>
 -  <strong>`POST /projects :`<strong/> <i>Endpoint responsible to create a project receiving in the request body the project's `title`<i/><br/><br/>
 Request body example below
 ```json
