@@ -4,10 +4,17 @@
 
 
 <p align="center">
+  <a href="#smiley-purpose">Purpose</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#car-run-the-application">Run the application</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#airplane-application-routes">Application routes</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-license">License</a>
+</p>
+
+## :smiley: Purpose
+
+<p align="center">
+  This project was built with intention to explore node.js internal modules, which means no Express. So, to fulfill this purpose, the most known modules were used! Among them are the 'fs' - (File System) module from node.js that is used to store our data, in the project it's not used any database management system like Postgres, Oracle OR MongoDB!
 </p>
 
 ## :rocket: Technologies
@@ -61,7 +68,7 @@ Request body example below
 -  <strong>`DELETE /projects?id=`<strong/><em>`number`<em/><strong>`:`<strong/> <i>Endpoint responsible to remove a specific project given its `id`.<i/>
 <em>`number : `<em/> Represents the `id` passed in the query string <br/>
 
-### :memo: License
+## :memo: License
 This project is under the MIT license. See the [LICENSE](https://github.com/gftf2011/nodejs-fs-projects-rest-api/blob/master/LICENSE) for more information.
 
 ---
