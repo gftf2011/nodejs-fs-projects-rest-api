@@ -6,6 +6,7 @@
 <p align="center">
   <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#car-run-the-application">Run the application</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#airplane-application-routes">Application routes</a>
 </p>
 
 ## :rocket: Technologies
@@ -27,7 +28,7 @@
 
 6.  Run 'yarn dev' to use the <strong>endpoints<strong/>
 
-## :airplane: application routes
+## :airplane: Application routes
 
 -  <strong>`GET /projects :`<strong/> <i>Endpoint responsible to read all projects<i/>
 -  <strong>`GET /projects?id=`<strong/><em>`number`<em><strong>`:`<strong/> <i>Endpoint responsible to retrieve a specific project given its `id`<i/><br/><br/>
