@@ -59,3 +59,10 @@ Request body example below
 ```
 -  <strong>`DELETE /projects?id=`<strong/><em>`number`<em/><strong>`:`<strong/> <i>Endpoint responsible to remove a specific project given its `id`.<i/>
 <em>`number : `<em/> Represents the `id` passed in the query string <br/>
+
+### :memo: License
+This project is under the MIT license. See the [LICENSE]() for more information.
+
+---
+
+Made with ♥ by Gabriel Ferrari Tarallo Ferraz :wave: [Get in touch!]()
