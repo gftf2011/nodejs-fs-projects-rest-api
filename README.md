@@ -2,7 +2,7 @@
   <img alt="Imagem da Logo do Framework node.js" src="https://www.pinclipart.com/picdir/big/102-1024697_related-wallpapers-node-js-logo-png-clipart.png" height="120" /><br><br> Node Project Management API
 </h1>
 
-## :microscope: Tecnologies
+## :rocket: Tecnologies
 
 - [yarn](https://classic.yarnpkg.com/lang/en/)
 - [node.JS](https://nodejs.org/en/)
@@ -25,3 +25,10 @@
 
 -  <strong>`GET /projects :`<strong/> <i>Endpoint responsible to read all projects<i/>
 -  <strong>`GET /projects?id=`<strong/><em>`number`<em><strong>`:`<strong/> <i>Endpoint responsible to retrieve a specific project given its unique identifier<i/>
+-  <strong>`POST /projects :`<strong/> <i>Endpoint responsible to create a project receiving in the request body the project's `title`<i/>
+  >  Request body example below
+  >  ```javascript
+  >  {
+  >    "title": "Project 1"
+  >  }
+  >  ```
