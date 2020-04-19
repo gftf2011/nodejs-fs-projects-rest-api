@@ -23,8 +23,6 @@ const server = http.createServer((req, res) => {
 
     const urlparse = url.parse(req.url, true);
 
-    console.log(req.method);
-
     if (urlparse.pathname === '/projects' && req.method === 'OPTIONS') {
         sendResponse(res, 200, true);
     }
