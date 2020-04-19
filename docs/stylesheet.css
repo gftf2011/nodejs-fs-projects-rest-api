@@ -43,12 +43,40 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+.main-section {
+    width: calc(100% - 16px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.shields {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.shields > img {
+    margin: 0 6px;
+}
+
+#node-img {
+    max-width: 640px;
+}
+
 .bg-blue-green {
     background-image: linear-gradient(120deg, #155799, #159957);
 }
 
 .bg-orange-red {
     background-image: linear-gradient(120deg, #D84A05, #E70E02);
+}
+
+.bg-blue-purple {
+    background-image: linear-gradient(120deg, #46097d, #155799);
 }
 
 .jumbotron {
@@ -197,6 +225,9 @@ a.elegant-btn:hover {
 }
 
 @media screen and (max-width: 768px) {
+    #node-img {
+        max-width: 320px;
+    }
     .container-wrapper {
         display: grid;
         grid-template-columns: 1fr;
