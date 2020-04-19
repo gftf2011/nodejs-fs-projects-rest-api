@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Gabriel Ferrari Tarallo Ferraz" />
+        <title>Page Title</title>
+        <link rel="stylesheet" href="./stylesheet.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-wrapper">
+            <div class="container blue">
+                <div class="header">
+                    <span class="http-verb blue">GET</span>
+                    &nbsp;
+                    &nbsp;
+                    <span class="url">http://localhost:8000/projects</span>
+                </div>
+                <form id="get-form">
+                    <input class="blue" type="submit" value="Submit">
+                </form>
+                <a class="link blue" href="get-projects.html" target="_self">video demo</a>
+            </div>
+            <div class="container blue">
+                <div class="header">
+                    <span class="http-verb blue">GET</span>
+                    &nbsp;
+                    &nbsp;
+                    <span class="url">http://localhost:8000/projects?id=<em>number</em></span>
+                </div>
+                <form id="get-form-with-id">
+                    <div class="form-group">
+                        <label for="get-query-id">ID:*</label>
+                        &nbsp;
+                        &nbsp;
+                        <input type="number" id="get-query-id" name="number">
+                    </div>
+                    <br>
+                    <input class="blue" type="submit" value="Submit">
+                </form>
+                <a class="link blue" href="get-projects-id.html" target="_self">video demo</a>
+            </div>
+            <div class="container green">
+                <div class="header">
+                    <span class="http-verb green">POST</span>
+                    &nbsp;
+                    &nbsp;
+                    <span class="url">http://localhost:8000/projects</span>
+                </div>
+                <form id="post-form">
+                    <div class="form-group">
+                        <label for="post-body-title">TITLE:*</label>
+                        &nbsp;
+                        &nbsp;
+                        <input type="text" id="post-body-title" name="text">
+                    </div>
+                    <br>
+                    <input class="green" type="submit" value="Submit">
+                </form>
+                <a class="link green" href="post-projects.html" target="_self">video demo</a>
+            </div>
+            <div class="container green">
+                <div class="header">
+                    <span class="http-verb green">POST</span>
+                    &nbsp;
+                    &nbsp;
+                    <span class="url">http://localhost:8000/projects/tasks?id=<em>number</em></span>
+                </div>
+                <form id="post-form-task">
+                    <div class="form-group">
+                        <label for="post-task-query-id">ID:*</label>
+                        &nbsp;
+                        &nbsp;
+                        <input type="number" id="post-task-query-id" name="number">
+                    </div>
+                    <div class="form-group">
+                        <label for="post-body-task">TASK:*</label>
+                        &nbsp;
+                        &nbsp;
+                        <input type="text" id="post-body-task" name="text">
+                    </div>
+                    <br>
+                    <input class="green" type="submit" value="Submit">
+                </form>
+                <a class="link green" href="post-tasks.html" target="_self">video demo</a>
+            </div>
+            <div class="container orange">
+                <div class="header">
+                    <span class="http-verb orange">PUT</span>
+                    &nbsp;
+                    &nbsp;
+                    <span class="url">http://localhost:8000/projects?id=<em>number</em></span>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="put-query-id">ID:*</label>
+                        &nbsp;
+                        &nbsp;
+                        <input type="number" id="put-query-id" name="number">
+                    </div>
+                    <div class="form-group">
+                        <label for="put-body-title">TITLE:*</label>
+                        &nbsp;
+                        &nbsp;
+                        <input type="text" id="put-body-title" name="text">
+                    </div>
+                    <br>
+                    <input class="orange" type="submit" value="Submit">
+                </form>
+                <a class="link orange" href="put-projects.html" target="_self">video demo</a>
+            </div>
+            <div class="container red">
+                <div class="header">
+                    <span class="http-verb red">DELETE</span>
+                    &nbsp;
+                    &nbsp;
+                    <span class="url">http://localhost:8000/projects?id=<em>number</em></span>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="delete-query-id">ID:*</label>
+                        &nbsp;
+                        &nbsp;
+                        <input type="number" id="delete-query-id" name="number">
+                    </div>
+                    <br>
+                    <input class="red" type="submit" value="Submit">
+                </form>
+                <a class="link red" href="delete-projects.html" target="_self">video demo</a>
+            </div>
+        </div>
+        <script>
+            var getForm = document.getElementById("get-form");
+            var getFormWithId = document.getElementById("get-form-with-id");
+            var postForm = document.getElementById("post-form");
+            var postFormTask = document.getElementById("post-form-task");
+
+            getForm.addEventListener("submit", event => {
+                event.preventDefault();
+
+                var init = {
+                    method: "get"
+                };
+                fetch('http://127.0.0.1:8000/projects', init).then(res => {
+                    return res.json();
+                }).then(obj => {
+                    var object = obj;
+
+                    alert(JSON.stringify(object, null, 2));
+                });
+            });
+
+            getFormWithId.addEventListener("submit", event => {
+                event.preventDefault();
+
+                var id = document.getElementById("get-query-id").value;
+
+                var init = {
+                    method: "get"
+                };
+
+                fetch(`http://127.0.0.1:8000/projects?id=${id}`, init).then(res => {
+                    return res.json();
+                }).then(obj => {
+                    var object = obj;
+
+                    alert(JSON.stringify(object, null, 2));
+                });
+            });
+
+            postForm.addEventListener("submit", event => {
+                event.preventDefault();
+
+                var titleValue = document.getElementById("post-body-title").value;
+
+                var body = {
+                    title: titleValue
+                };
+
+                var init = {
+                    method: "post",
+                    body: JSON.stringify(body)
+                };
+
+                fetch('http://127.0.0.1:8000/projects', init).then(res => {
+                    return res.json();
+                }).then(obj => {
+                    var object = obj;
+
+                    alert(JSON.stringify(object, null, 2));
+                });
+            });
+
+            postFormTask.addEventListener("submit", event => {
+                event.preventDefault();
+
+                var id = document.getElementById("post-task-query-id").value;
+
+                var taskValue = document.getElementById("post-body-task").value;
+
+                var body = {
+                    task: taskValue
+                };
+
+                var init = {
+                    method: "post",
+                    body: JSON.stringify(body)
+                };
+
+                fetch(`http://127.0.0.1:8000/projects/tasks?id=${id}`, init).then(res => {
+                    return res.json();
+                }).then(obj => {
+                    var object = obj;
+
+                    alert(JSON.stringify(object, null, 2));
+                });
+            });
+        </script>
+    </body>
+</html>

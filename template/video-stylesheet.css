@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+a {
+    margin-left: auto;
+    text-align: center;
+    height: 64px;
+    width: 64px;
+    font-size: 64px;
+    text-decoration: none;
+    color: #ffffff;
+    z-index: 3;
+}
+
+video {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+}
+
+.bg {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+}

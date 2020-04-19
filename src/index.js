@@ -12,7 +12,7 @@ let projects = JSON.parse(data);
 let lastindex = projects.length === 0 ? 0 : projects[projects.length - 1].id;
 
 const sendResponse = (res, status, data) => {
-    res.writeHead(status, {'Content-Type': 'application/json'});
+    res.writeHead(status, {'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'});
     res.end(JSON.stringify(data, null, 2));
 };
 
