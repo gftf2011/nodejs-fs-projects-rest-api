@@ -12,14 +12,23 @@ let projects = JSON.parse(data);
 let lastindex = projects.length === 0 ? 0 : projects[projects.length - 1].id;
 
 const sendResponse = (res, status, data) => {
-    res.writeHead(status, {'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'});
+    res.writeHead(status, {'Content-Type': 'application/json'});
     res.end(JSON.stringify(data, null, 2));
 };
 
 const server = http.createServer((req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader("Access-Control-Allow-Methods", "GET,OPTIONS,POST,PUT,DELETE");
+    res.setHeader('Access-Control-Allow-Headers', 'content-type');
+
     const urlparse = url.parse(req.url, true);
 
-    if (urlparse.pathname === '/projects' && req.method === 'GET') {
+    console.log(req.method);
+
+    if (urlparse.pathname === '/projects' && req.method === 'OPTIONS') {
+        sendResponse(res, 200, true);
+    }
+    else if (urlparse.pathname === '/projects' && req.method === 'GET') {
         const search = urlparse.search;
 
         if (search) {

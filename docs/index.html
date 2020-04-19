@@ -93,7 +93,7 @@
                     &nbsp;
                     <span class="url">http://localhost:8000/projects?id=<em>number</em></span>
                 </div>
-                <form>
+                <form id="put-form">
                     <div class="form-group">
                         <label for="put-query-id">ID:*</label>
                         &nbsp;
@@ -118,7 +118,7 @@
                     &nbsp;
                     <span class="url">http://localhost:8000/projects?id=<em>number</em></span>
                 </div>
-                <form>
+                <form id="delete-form">
                     <div class="form-group">
                         <label for="delete-query-id">ID:*</label>
                         &nbsp;
@@ -136,14 +136,16 @@
             var getFormWithId = document.getElementById("get-form-with-id");
             var postForm = document.getElementById("post-form");
             var postFormTask = document.getElementById("post-form-task");
+            var putForm = document.getElementById("put-form");
+            var deleteForm = document.getElementById("delete-form");
 
             getForm.addEventListener("submit", event => {
                 event.preventDefault();
 
-                var init = {
+                var header = {
                     method: "get"
                 };
-                fetch('http://127.0.0.1:8000/projects', init).then(res => {
+                fetch('http://127.0.0.1:8000/projects', header).then(res => {
                     return res.json();
                 }).then(obj => {
                     var object = obj;
@@ -157,11 +159,11 @@
 
                 var id = document.getElementById("get-query-id").value;
 
-                var init = {
+                var header = {
                     method: "get"
                 };
 
-                fetch(`http://127.0.0.1:8000/projects?id=${id}`, init).then(res => {
+                fetch(`http://127.0.0.1:8000/projects?id=${id}`, header).then(res => {
                     return res.json();
                 }).then(obj => {
                     var object = obj;
@@ -179,12 +181,12 @@
                     title: titleValue
                 };
 
-                var init = {
+                var header = {
                     method: "post",
                     body: JSON.stringify(body)
                 };
 
-                fetch('http://127.0.0.1:8000/projects', init).then(res => {
+                fetch('http://127.0.0.1:8000/projects', header).then(res => {
                     return res.json();
                 }).then(obj => {
                     var object = obj;
@@ -204,12 +206,55 @@
                     task: taskValue
                 };
 
-                var init = {
+                var header = {
                     method: "post",
                     body: JSON.stringify(body)
                 };
 
-                fetch(`http://127.0.0.1:8000/projects/tasks?id=${id}`, init).then(res => {
+                fetch(`http://127.0.0.1:8000/projects/tasks?id=${id}`, header).then(res => {
+                    return res.json();
+                }).then(obj => {
+                    var object = obj;
+
+                    alert(JSON.stringify(object, null, 2));
+                });
+            });
+
+            putForm.addEventListener("submit", event => {
+                event.preventDefault();
+
+                var id = document.getElementById("put-query-id").value;
+
+                var titleValue = document.getElementById("put-body-title").value;
+
+                var body = {
+                    title: titleValue
+                };
+
+                var header = {
+                    method: "put",
+                    body: JSON.stringify(body)
+                };
+
+                fetch(`http://127.0.0.1:8000/projects?id=${id}`, header).then(res => {
+                    return res.json();
+                }).then(obj => {
+                    var object = obj;
+
+                    alert(JSON.stringify(object, null, 2));
+                });
+            });
+
+            deleteForm.addEventListener("submit", event => {
+                event.preventDefault();
+
+                var id = document.getElementById("delete-query-id").value;
+
+                var header = {
+                    method: "delete"
+                };
+
+                fetch(`http://127.0.0.1:8000/projects?id=${id}`, header).then(res => {
                     return res.json();
                 }).then(obj => {
                     var object = obj;
