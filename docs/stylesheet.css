@@ -5,7 +5,6 @@
 
 body {
     position: relative;
-    margin: 8px;
 }
 
 em {
@@ -81,11 +80,7 @@ input[type="submit"] {
 
 .jumbotron {
     padding: 16px;
-    border-radius: 8px;
-    margin: 24px 0;
     min-height: 300px;
-    width: calc(100% - 32px);
-    
 }
 
 .main-text {
@@ -152,6 +147,7 @@ a.elegant-btn:hover {
 }
 
 .container-wrapper {
+    margin: 8px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 8px;
