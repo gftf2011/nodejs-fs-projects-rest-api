@@ -1,0 +1,124 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+    width: 100%;
+    background-color: #3058F1;
+}
+
+nav > img {
+    margin-bottom: 4px;
+    margin-left: 8px;
+    height: 40px;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 350px;
+    list-style-type: none;
+}
+
+nav > ul > li {
+    height: 75px;
+    width: 100%;
+}
+
+nav > ul > li > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    width: 100%;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #dddddd;
+}
+
+nav > ul > li > a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+nav > .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    width: 75px;
+}
+
+nav > .hamburger-menu > .hamburger-menu-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #cccccc;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+nav > .hamburger-menu > .hamburger-menu-btn:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+}
+
+nav > .hamburger-menu > .hamburger-menu-btn > span {
+    font-size: 24px;
+    color: inherit;
+}
+
+ul.dropdown-menu {
+    top: 70px;
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #3058F1;
+    height: 150px;
+    width: 100%;
+    position: absolute;
+}
+
+ul.dropdown-menu > li {
+    height: 50px;
+    width: 100%;
+}
+
+ul.dropdown-menu > li > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #dddddd;
+}
+
+ul.dropdown-menu > li > a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+    nav > ul {
+        display: none;
+    }
+
+    nav > .hamburger-menu {
+        display: flex;
+    }
+}

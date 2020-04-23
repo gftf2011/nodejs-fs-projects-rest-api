@@ -7,6 +7,7 @@
         <meta name="author" content="Gabriel Ferrari Tarallo Ferraz" />
         <title>Project Management API</title>
         <link rel="stylesheet" href="./stylesheet.css" />
+        <link rel="stylesheet" href="./navigation-stylesheet.css" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="57x57" href="./assets/ico/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="./assets/ico/apple-icon-60x60.png">
@@ -27,6 +28,24 @@
         <meta name="theme-color" content="#ffffff">
     </head>
     <body>
+        <nav>
+            <img alt="Node.JS Official Logo" src="./assets/img/node-logo.png" />
+            <ul>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#how-it-works">How it works</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <div id="hamburger" class="hamburger-menu-btn">
+                    <span id="hamburger-entity">&#9776;</span>
+                </div>
+            </div>
+        </nav>
+        <ul id="dropdown" class="dropdown-menu">
+            <li><a href="#project">Project</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+        </ul>
         <div class="main-section">
             <img id="node-img" alt="Node.JS Official Logo" src="./assets/img/node-logo.png" />
             <div class="shields">
@@ -43,14 +62,15 @@
                 <img alt="Repository size" src="https://img.shields.io/github/repo-size/gftf2011/nodejs-fs-projects-rest-api">
             </div>
         </div>
-        <div class="jumbotron bg-blue-green">
-            <h1 class="main-text">Node.JS Project Management API Documentation</h1>
+        <div id="project" class="jumbotron bg-blue-green">
+            <h1 class="main-text">Project</h1>
+            <h2 class="main-text">Node.JS Project Management API Documentation</h2>
             <p class="secondary-text">For the official documentation, check the <em>Github Repo</em> in the link below!</p>
             <div class="btn-group">
                 <a class="elegant-btn" href="https://github.com/gftf2011/nodejs-fs-projects-rest-api" target="_blank">Github Repo</a>
             </div>
         </div>
-        <div class="jumbotron bg-orange-red">
+        <div id="about" class="jumbotron bg-orange-red">
             <h1 class="main-text">About</h1>
             <p class="secondary-text">This project was built with intention to explore node.js internal modules, which means no Express. So, to fulfill this purpose, the most known modules were used! Among them are the 'fs' - (File System) module from node.js that is used to store our data, in the project it's not used any database management system like Postgres, Oracle OR MongoDB!</p>
             <p class="secondary-text">This project is under Github <em>MIT</em> License! Check the Project's License for more information!</p>
@@ -58,7 +78,7 @@
                 <a class="elegant-btn" href="https://github.com/gftf2011/nodejs-fs-projects-rest-api/blob/master/LICENSE" target="_blank">Github License</a>
             </div>
         </div>
-        <div class="jumbotron bg-blue-purple">
+        <div id="how-it-works" class="jumbotron bg-blue-purple">
             <h1 class="main-text">How it works?</h1>
             <p class="secondary-text">To test the application check first if the Github Repo was cloned and it's running in your machine!</p>
             <p class="secondary-text">The application routes will use the <em>localhost</em> at port 8000!</p>
@@ -186,12 +206,41 @@
             </div>
         </div>
         <script>
+            var indexToggle = 0;
             var getForm = document.getElementById("get-form");
             var getFormWithId = document.getElementById("get-form-with-id");
             var postForm = document.getElementById("post-form");
             var postFormTask = document.getElementById("post-form-task");
             var putForm = document.getElementById("put-form");
             var deleteForm = document.getElementById("delete-form");
+            var hamburger = document.getElementById("hamburger");
+
+            window.addEventListener("resize", event => {
+                var width = window.innerWidth;
+                if (width > 768) {
+                    var entity = document.getElementById("hamburger-entity");
+                    var dropdown = document.getElementById("dropdown");
+
+                    dropdown.style.display = "none";
+                    entity.innerHTML = "&#9776;";
+                    indexToggle = 0;
+                }
+            });
+
+            hamburger.addEventListener("click", event => {
+                var entity = document.getElementById("hamburger-entity");
+                var dropdown = document.getElementById("dropdown");
+
+                if (indexToggle % 2 === 0) {
+                    indexToggle++;
+                    entity.innerHTML = "&times;";
+                    dropdown.style.display = "flex";
+                } else if (indexToggle % 2 === 1) {
+                    indexToggle++;
+                    entity.innerHTML = "&#9776;";
+                    dropdown.style.display = "none";
+                }
+            });
 
             getForm.addEventListener("submit", event => {
                 event.preventDefault();
