@@ -13,35 +13,6 @@ em {
     font-family: 'Roboto', sans-serif;
 }
 
-form {
-    margin-top: 12px;
-    display: block;
-    width: calc(100% - 12px);
-    border: 1px solid #cccccc;
-    padding: 6px;
-    border-radius: 6px;
-}
-
-input {
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 3px;
-    border-color: #000000;
-    padding-left: 6px;
-    height: 25px;
-    width: calc(100% - 12px);
-}
-
-input[type="submit"] {
-    padding: 6px;
-    height: 30px;
-    width: 75px;
-    background-color: transparent;
-    border-style: solid;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
 .main-section {
     width: calc(100% - 16px);
     display: flex;
@@ -76,6 +47,10 @@ input[type="submit"] {
 
 .bg-blue-purple {
     background-image: linear-gradient(120deg, #46097d, #155799);
+}
+
+.bg-yellow-orange {
+    background-image: linear-gradient(120deg, #D88A05, #D84A05);
 }
 
 .jumbotron {
@@ -139,20 +114,6 @@ a.elegant-btn:hover {
     text-decoration: none;
 }
 
-.form-group {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-}
-
-.container-wrapper {
-    margin: 8px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 8px;
-}
-
 .blue {
     border: 2px solid #3058F1;
     color: #3058F1;
@@ -173,60 +134,8 @@ a.elegant-btn:hover {
     color: #E70E02;
 }
 
-.container {
-    position: relative;
-    display: block;
-    height: 300px;
-    border-radius: 12px;
-    padding: 6px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-}
-
-.header {
-    display: flex;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #cccccc;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start
-}
-
-.http-verb {
-    font-weight: 500;
-    padding: 6px;
-    width: 65px;
-    text-align: center;
-    border-radius: 6px;
-}
-
-.url {
-    font-size: 14px;
-}
-
-@media screen and (max-width: 992px) {
-    .container-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .container-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 8px;
-    }
-}
-
 @media screen and (max-width: 768px) {
     #node-img {
         max-width: 320px;
-    }
-    .container-wrapper {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 8px;
     }
 }

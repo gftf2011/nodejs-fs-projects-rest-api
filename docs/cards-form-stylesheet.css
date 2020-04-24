@@ -1,0 +1,214 @@
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    padding: 8px;
+    width: calc(100% - 16px);
+}
+
+.cards:nth-child(1) {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: #ffffff;
+}
+
+.cards:nth-child(1) > div {
+    padding: 8px;
+    border-radius: 8px;
+    height: 100%;
+    width: calc(100% - 16px);
+    color: #000000;
+    border: 2px solid rgba(0,0,0,0.6);
+}
+
+.cards:nth-child(2) {
+    background-color: transparent;
+}
+
+.cards:nth-child(2) > div {
+    padding: 8px;
+    border-radius: 8px;
+    height: 100%;
+    width: calc(100% - 16px);
+    color: #ffffff;
+    border: 2px solid rgba(255,255,255,0.6);
+}
+
+.cards:nth-child(3) {
+    background-color: transparent;
+}
+
+.cards:nth-child(3) > div {
+    padding: 8px;
+    border-radius: 8px;
+    height: 100%;
+    width: calc(100% - 16px);
+    color: #ffffff;
+    border: 2px solid rgba(255,255,255,0.6);
+}
+
+.cards:nth-child(4) {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    background-color: #ffffff;
+}
+
+.cards:nth-child(4) > div {
+    padding: 8px;
+    border-radius: 8px;
+    height: 100%;
+    width: calc(100% - 16px);
+    color: #000000;
+    border: 2px solid rgba(0,0,0,0.6);
+}
+
+.cards:nth-child(5) {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: #ffffff;
+}
+
+.cards:nth-child(5) > div {
+    padding: 8px;
+    border-radius: 8px;
+    height: 100%;
+    width: calc(100% - 16px);
+    color: #000000;
+    border: 2px solid rgba(0,0,0,0.6);
+}
+
+.cards:nth-child(6) {
+    background-color: transparent;
+}
+
+.cards:nth-child(6) > div {
+    padding: 8px;
+    border-radius: 8px;
+    height: 100%;
+    width: calc(100% - 16px);
+    color: #ffffff;
+    border: 2px solid rgba(255,255,255,0.6);
+}
+
+.cards > div > div {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cards > div > div.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.description-header {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.card-form-container {
+    position: relative;
+    display: block;
+    height: 300px;
+    border-radius: 12px;
+    padding: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.card-form-header {
+    display: flex;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #cccccc;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.http-verb {
+    font-weight: 500;
+    padding: 6px;
+    width: 65px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.http-url {
+    font-size: 14px;
+}
+
+.card-form-container form {
+    margin-top: 12px;
+    display: block;
+    width: calc(100% - 12px);
+    border: 1px solid #cccccc;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.card-form-container input {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    border-color: #000000;
+    padding-left: 6px;
+    height: 25px;
+    width: calc(100% - 12px);
+}
+
+.card-form-container input[type="submit"] {
+    padding: 6px;
+    height: 30px;
+    width: 75px;
+    background-color: transparent;
+    border-style: solid;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+    .cards:nth-child(1) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .cards:nth-child(4) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .cards:nth-child(5) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .cards:nth-child(odd) {
+        background-color: #ffffff;
+    }
+
+    .cards:nth-child(even) {
+        background-color: transparent;
+    }
+
+    .cards:nth-child(odd) > div {
+        color: #000000;
+        border: 2px solid rgba(0,0,0,0.6);
+    }
+
+    .cards:nth-child(even) > div {
+        color: #ffffff;
+        border: 2px solid rgba(255,255,255,0.6);
+    }
+}

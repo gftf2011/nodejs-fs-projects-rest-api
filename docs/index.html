@@ -7,6 +7,8 @@
         <meta name="author" content="Gabriel Ferrari Tarallo Ferraz" />
         <title>Project Management API</title>
         <link rel="stylesheet" href="./stylesheet.css" />
+        <link rel="stylesheet" href="./grid-stylesheet.css" />
+        <link rel="stylesheet" href="./cards-form-stylesheet.css" />
         <link rel="stylesheet" href="./navigation-stylesheet.css" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="57x57" href="./assets/ico/apple-icon-57x57.png">
@@ -34,6 +36,7 @@
                 <li><a href="#project">Project</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#how-it-works">How it works</a></li>
+                <li><a href="#routes">Routes</a></li>
             </ul>
             <div class="hamburger-menu">
                 <div id="hamburger" class="hamburger-menu-btn">
@@ -45,6 +48,7 @@
             <li><a href="#project">Project</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#routes">Routes</a></li>
         </ul>
         <div class="main-section">
             <img id="node-img" alt="Node.JS Official Logo" src="./assets/img/node-logo.png" />
@@ -83,26 +87,165 @@
             <p class="secondary-text">To test the application check first if the Github Repo was cloned and it's running in your machine!</p>
             <p class="secondary-text">The application routes will use the <em>localhost</em> at port 8000!</p>
         </div>
+        <div id="routes" class="jumbotron bg-yellow-orange" style="padding: 16px 0;">
+            <h1 class="main-text">Routes</h1>
+            <div class="grid-two-to-one">
+                <div class="cards">
+                    <div>
+                        <div class="description">
+                            <div class="description-header">HTTP Verb</div>
+                            <samp>GET</samp>
+                        </div>
+                        </br>
+                        <div class="description">
+                            <div class="description-header">URL</div>
+                            <samp>http://localhost:8000/projects</samp>
+                        </div>
+                        </br>
+                        <div class="description">
+                            <div class="description-header">Description</div>
+                            <div>Endpoint responsible to read all projects.</div>
+                            <div>Calling the endpoint will retrieve all projects in the api inside a vector.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div>
+                        <div class="description">
+                            <div class="description-header">HTTP Verb</div>
+                            <samp>GET</samp>
+                        </div>
+                        </br>
+                        <div class="description">
+                            <div class="description-header">URL</div>
+                            <samp>http://localhost:8000/projects?id=<b>number</b></samp>
+                        </div>
+                        </br>
+                        <div class="description">
+                            <div class="description-header">Query String</div>
+                            <div><samp><b>Number</b></samp> represents the specific project's <samp>id</samp> passed in URL parameter!</div>
+                        </div>
+                        </br>
+                        <div class="description">
+                            <div class="description-header">Description</div>
+                            <div>Endpoint responsible to retrieve a specific project given its <samp>id</samp>.</div>
+                            <div>Calling the endpoint will retrieve a specific project object in JSON format.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div>
+                        <div class="description">
+                            <div class="description-header">HTTP Verb</div>
+                            <samp>POST</samp>
+                        </div>
+                        </br>
+                        <div class="description">
+                            <div class="description-header">URL</div>
+                            <samp>http://localhost:8000/projects</samp>
+                        </div>
+                        </br>
+                        <div class="description">
+                            <div class="description-header">Description</div>
+                            <div>Endpoint responsible to create a project receiving in the request body the project's <samp>title</samp>.</div>
+                            <div>Calling the endpoint will retrieve all projects in the api inside a vector.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div>
+                        <div class="description">
+                            <div class="description-header">HTTP Verb</div>
+                            <samp>POST</samp>
+                        </div>
+                        </br>
+                        <div class="description">
+                            <div class="description-header">URL</div>
+                            <samp>http://localhost:8000/projects?id=<b>number</b></samp>
+                        </div>
+                        </br>
+                        <div class="description">
+                            <div class="description-header">Query String</div>
+                            <div><samp><b>Number</b></samp> represents the specific project's <samp>id</samp> passed in URL parameter!</div>
+                        </div>
+                        </br>
+                        <div class="description">
+                            <div class="description-header">Description</div>
+                            <div>Endpoint responsible to create a task to a specific project given its id, also its passed through the request body the <samp>task</samp> for the project.</div>
+                            <div>Calling the endpoint will retrieve all projects in the api inside a vector.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div>
+                        <div class="description">
+                            <div class="description-header">HTTP Verb</div>
+                            <samp>PUT</samp>
+                        </div>
+                        </br>
+                        <div class="description">
+                            <div class="description-header">URL</div>
+                            <samp>http://localhost:8000/projects?id=<b>number</b></samp>
+                        </div>
+                        </br>
+                        <div class="description">
+                            <div class="description-header">Query String</div>
+                            <div><samp><b>Number</b></samp> represents the specific project's <samp>id</samp> passed in URL parameter!</div>
+                        </div>
+                        </br>
+                        <div class="description">
+                            <div class="description-header">Description</div>
+                            <div>Endpoint responsible to update a specific project's title given its <samp>id</samp>, also its passed through the request body the new project's <samp>title</samp>.</div>
+                            <div>Calling the endpoint will retrieve all projects in the api inside a vector</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div>
+                        <div class="description">
+                            <div class="description-header">HTTP Verb</div>
+                            <samp>DELETE</samp>
+                        </div>
+                        </br>
+                        <div class="description">
+                            <div class="description-header">URL</div>
+                            <samp>http://localhost:8000/projects?id=<b>number</b></samp>
+                        </div>
+                        </br>
+                        <div class="description">
+                            <div class="description-header">Query String</div>
+                            <div><samp><b>Number</b></samp> represents the specific project's <samp>id</samp> passed in URL parameter!</div>
+                        </div>
+                        </br>
+                        <div class="description">
+                            <div class="description-header">Description</div>
+                            <div>Endpoint responsible to remove a specific project given its <samp>id</samp>.</div>
+                            <div>Calling the endpoint will retrieve all projects in the api inside a vector</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <h1 id="routes-header">Application Routes Testing Forms</h1>
-        <div class="container-wrapper">
-            <div class="container blue">
-                <div class="header">
+        <div class="grid-default">
+            <div class="card-form-container blue">
+                <div class="card-form-header">
                     <span class="http-verb blue">GET</span>
                     &nbsp;
                     &nbsp;
-                    <span class="url">http://localhost:8000/projects</span>
+                    <span class="http-url">http://localhost:8000/projects</span>
                 </div>
                 <form id="get-form">
                     <input class="blue" type="submit" value="Submit">
                 </form>
                 <a class="link blue" href="get-projects.html" target="_self">video demo</a>
             </div>
-            <div class="container blue">
-                <div class="header">
+            <div class="card-form-container blue">
+                <div class="card-form-header">
                     <span class="http-verb blue">GET</span>
                     &nbsp;
                     &nbsp;
-                    <span class="url">http://localhost:8000/projects?id=<em>number</em></span>
+                    <span class="http-url">http://localhost:8000/projects?id=<em>number</em></span>
                 </div>
                 <form id="get-form-with-id">
                     <div class="form-group">
@@ -116,12 +259,12 @@
                 </form>
                 <a class="link blue" href="get-projects-id.html" target="_self">video demo</a>
             </div>
-            <div class="container green">
-                <div class="header">
+            <div class="card-form-container green">
+                <div class="card-form-header">
                     <span class="http-verb green">POST</span>
                     &nbsp;
                     &nbsp;
-                    <span class="url">http://localhost:8000/projects</span>
+                    <span class="http-url">http://localhost:8000/projects</span>
                 </div>
                 <form id="post-form">
                     <div class="form-group">
@@ -135,12 +278,12 @@
                 </form>
                 <a class="link green" href="post-projects.html" target="_self">video demo</a>
             </div>
-            <div class="container green">
-                <div class="header">
+            <div class="card-form-container green">
+                <div class="card-form-header">
                     <span class="http-verb green">POST</span>
                     &nbsp;
                     &nbsp;
-                    <span class="url">http://localhost:8000/projects/tasks?id=<em>number</em></span>
+                    <span class="http-url">http://localhost:8000/projects/tasks?id=<em>number</em></span>
                 </div>
                 <form id="post-form-task">
                     <div class="form-group">
@@ -160,12 +303,12 @@
                 </form>
                 <a class="link green" href="post-tasks.html" target="_self">video demo</a>
             </div>
-            <div class="container orange">
-                <div class="header">
+            <div class="card-form-container orange">
+                <div class="card-form-header">
                     <span class="http-verb orange">PUT</span>
                     &nbsp;
                     &nbsp;
-                    <span class="url">http://localhost:8000/projects?id=<em>number</em></span>
+                    <span class="http-url">http://localhost:8000/projects?id=<em>number</em></span>
                 </div>
                 <form id="put-form">
                     <div class="form-group">
@@ -185,12 +328,12 @@
                 </form>
                 <a class="link orange" href="put-projects.html" target="_self">video demo</a>
             </div>
-            <div class="container red">
-                <div class="header">
+            <div class="card-form-container red">
+                <div class="card-form-header">
                     <span class="http-verb red">DELETE</span>
                     &nbsp;
                     &nbsp;
-                    <span class="url">http://localhost:8000/projects?id=<em>number</em></span>
+                    <span class="http-url">http://localhost:8000/projects?id=<em>number</em></span>
                 </div>
                 <form id="delete-form">
                     <div class="form-group">
