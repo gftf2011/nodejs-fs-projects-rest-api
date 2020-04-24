@@ -84,7 +84,7 @@ Request body example below
   "title": "Project 2"
 }
 ```
--  <strong>`DELETE /projects?id=`<strong/><em>`number`<em/><strong>`:`<strong/> <i>Endpoint responsible to remove a specific project given its `id`.<i/>
+-  <strong>`DELETE /projects?id=`<strong/><em>`number`<em/><strong>`:`<strong/> <i>Endpoint responsible to remove a specific project given its `id`.<i/><br/>
 <em>`number : `<em/> Represents the `id` passed in the query string <br/>
 
 ## :memo: License
